@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="CODE" content="">
+  <meta name="Ashwin" content=""> 
+<link rel="stylesheet" href="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css">
+<link rel="stylesheet" href="/chat/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/chat/css/bootstrap.min.css">
+
+	
+<script src="//oss.maxcdn.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//oss.maxcdn.com/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#attributeForm').bootstrapValidator();
+});
+</script> 
+    
+ 
+    <style>
+        #form   
+        {
+           color:black;
+           
+        }
+    </style>
+</head>
+    <?php
+    session_start();
+    require'temp.html';
+?>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			 
+            <div class="jumbotron">
+    <h1>Welcome! </h1>
+    <p>Hurray..!  </p>
+   
+</div> 
+			 
+			 
+			<div class="row clearfix" id="form">
+			
+				<div class="col-md-12 column">
+				
+					<form action="add.php" id="attributeForm" method="post" class="form-horizontal" 
+						data-bv-message="This value is not valid"
+						data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+						data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+						data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+                          
+						 
+    <div class="form-group">
+        <label class="col-sm-3 control-label">ISBN</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="isbn" placeholder="First name"
+                   data-bv-notempty="true" data-bv-notempty-message="The first name is required and cannot be empty" />
+        </div>
+         
+    </div> 
+                        
+    <div class="form-group">
+        <label class="col-sm-3 control-label">Title</label>
+        <div class="col-sm-5">
+            <input class="form-control" name="title" type="text" placeholder=" "  />
+        </div>
+    </div>
+                        
+  
+                            <div class="form-group">
+        <label class="col-sm-3 control-label">Author</label>
+        <div class="col-sm-5">
+            <input class="form-control" name="author" type="text" placeholder="10 digit phone number"
+                   data-bv-notempty="true" data-bv-notempty-message="Phone number is required and cannot be empty"
+                    />
+        </div>
+    </div>                     <div class="form-group">
+        <div class="form-group">
+                        <label class="col-sm-3 control-label">Published date</label>
+        <div class="col-sm-5">
+            <input class="form-control" name="date" type="text" placeholder="10 digit phone number"
+                   data-bv-notempty="true" data-bv-notempty-message="Phone number is required and cannot be empty"
+                    />
+        </div>
+    </div>
+                        <div class="form-group">
+                        <label class="col-sm-3 control-label">Genre</label>
+        <div class="col-sm-5">
+            <select name="genre">
+                <option name="genre">Select</option>
+                <option value="1">Educational</option>
+                <option value="2">Fiction</option>
+                <option value="3">Comedy</option>
+                <option value="4">Parody</option>
+                <option value="5">Drama</option>
+                <option value="6">Horror</option>
+                <option value="7">Tragedy</option>
+                <option value="8">Fantasy</option>
+            </select>
+        </div>
+    </div>
+                        
+                 <div class="form-group">
+                        <label class="col-sm-3 control-label">Category</label>
+        <div class="col-sm-5">
+            <select name="cat">
+                <option>Select</option>
+                <option value="Online">Online</option>
+                <option value="Physical">Physical</option>
+                 
+            </select>
+        </div>
+    </div>
+		 
+     
+    <div class="form-group">
+         
+        
+ 
+		<button type="submit" class="btn btn-success" >Register</button>
+ 
+    </div>
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Library</title>
+ 
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+      <?php
+    include'template.html';
+session_start();
+ 	if(isset($_SESSION['email']))
+	   	   	header('Location: /library/main/index.php');
+    
+?>
+
+  </head>
+    <style>
+         .a
+        {
+            padding-bottom: 120px;
+        }
+    </style>
+  <body>
+<div class="a">
+<div class="col-md-12 column">
+		<form action="login.php" id="attributeForm" method="post" class="form-horizontal" 
+						data-bv-message="This value is not valid"
+						data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+						data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+						data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+						<br/>
+						<br/>
+		
+		<div class="form-group">
+			<label class="col-sm-3 control-label"><strong>Email</strong></label>
+			<div class="col-sm-5">
+				<input class="form-control" name="email" type="email" placeholder="yourname@example.com"
+					data-bv-notempty="true" data-bv-notempty-message="The username is required and cannot be empty"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-3 control-label"><strong>Password</strong></label>
+			<div class="col-sm-5">
+				<input type="password" class="form-control" name="pass" placeholder="******"
+					data-bv-notempty="true" data-bv-notempty-message="The password is required and cannot be empty"
+					data-bv-identical="true" data-bv-different="true" data-bv-different-field="username"  />
+			</div>
+			<button type="submit" class="btn btn-success" name="submit">Log in</button>
+		</div>
+		</form>
+      </div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

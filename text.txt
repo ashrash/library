@@ -1,0 +1,42 @@
+Login
+4 in a team (validation)
+roll no.
+notification bar.
+team members approval.
+accout types(student,coordinator)
+Current team(list team members,project description)
+remove team members
+
+
+Coordinator account
+
+
+
+tables
+1.temp_Teams
+----> id , team name , avg cgpa , project name ,no_mem,approved,guide,advisor,status
+
+3.Student list
+----> id , Name ,email ,pass , roll no , cgpa , year , phno, date of account creation ,team id 
+4.request
+----> id, email,team name , project name
+
+CB.EN.U4.CSE[    ]  status remove
+
+
+[     ] [add member]
+ submit
+when member is added 
+check team id.
+if assigned report error.
+else
+    assign team id.
+
+
+
+if all have approved 
+when submit is clicked
+---> send request to coordinator
+
+
+and when coordinator accepts ---> move the record to confirmed_teams
